@@ -591,21 +591,21 @@
 
 // Using the prototype Property
 
-function Person(first, last, age, eye) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eye;
-}
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
 
-Person.prototype.nationality = "English";
+// Person.prototype.nationality = "English";
 
-const myFather = new Person("John", "Doe", 50, "blue");
-console.log("The nationality of my father is " + myFather.nationality);
+// const myFather = new Person("John", "Doe", 50, "blue");
+// console.log("The nationality of my father is " + myFather.nationality);
 
 
 
-// JavaScript Functions
+// JavaScript Functions Call ()
 
 // const myObject = {
 //     firstName:"John",
@@ -615,3 +615,58 @@ console.log("The nationality of my father is " + myFather.nationality);
 //     }
 //   }
 //   console.log(myObject.fullName());
+
+
+// The JavaScript apply() Method
+
+// const person = {
+    
+//     fullname :  function (){
+//         return this.firstname + " " + this.lastname ;
+//     }
+// }
+
+// const person1 = {
+//     firstname : "Jonh ",
+//     lastname :  "Wick" ,
+// }
+// console.log(person.fullname.apply(person1));
+
+
+// Function Borrowing bind 
+
+// const person ={
+//     firstname : "Jonh",
+//     lastname : "Wick",
+//     fullname : function(){
+//         return this.firstname + " " + this.lastname;
+//     }
+// }
+
+// const member = {
+//     firstname : "Heng",
+//     lastname: "Hong",
+// }
+
+// let fullname = person.fullname.bind(member);
+
+// console.log(fullname());
+
+
+
+
+// The Constructor Method
+
+class Car {
+    constructor(name, year){
+        this.name = name;
+        this.year = year;
+    }
+    age() {
+     let date = new Date();
+     return date.getFullYear() - this.year;
+    }
+}
+
+let myCar = new Car ("Ford", 2014);
+console.log("My car is + " + myCar.age() + "year odl");
