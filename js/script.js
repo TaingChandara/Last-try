@@ -591,14 +591,27 @@
 
 // Using the prototype Property
 
-// function Person(first, last, age, eye) {
-//   this.firstName = first;
-//   this.lastName = last;
-//   this.age = age;
-//   this.eyeColor = eye;
-// }
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
 
-// Person.prototype.nationality = "English";
+Person.prototype.nationality = "English";
 
-// const myFather = new Person("John", "Doe", 50, "blue");
-// console.log("The nationality of my father is " + myFather.nationality);
+const myFather = new Person("John", "Doe", 50, "blue");
+console.log("The nationality of my father is " + myFather.nationality);
+
+
+
+// JavaScript Functions
+
+// const myObject = {
+//     firstName:"John",
+//     lastName: "Doe",
+//     fullName: function() {
+//       return this.firstName + " " + this.lastName;
+//     }
+//   }
+//   console.log(myObject.fullName());
